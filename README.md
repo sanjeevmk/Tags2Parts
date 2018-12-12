@@ -1,7 +1,7 @@
 ## Tags2Parts : Discovering Semantic Regions from Shape Tags
 ### This is the source repository of Tags2Parts as detailed in : https://arxiv.org/abs/1708.06673
 
-We perform weakly-supervised segmentation using the *WU-Net* architecture presented in the paper; for training, only shape-level labels of the form Has-Part/Lacks-Part are used, without ever seeing fine-grained part annotation.
+Tags2Parts performs weakly-supervised segmentation using the *WU-Net* architecture presented in the paper; for training, only shape-level labels of the form Has-Part/Lacks-Part are used, without ever seeing fine-grained part annotation.
 
 Additionally, the architecture can be extended for fully supervised segmentation where ground-truth segments are available during training.
 
@@ -12,10 +12,11 @@ The corresponding ShapeNet 3D models - **ShapeNetCore.v1** - can be downloaded f
 >Download ShapeNetCore.v1
 
 - ##### Additional Data
-Of the 6 supported parts - Arm, Roof, Propeller, Chair Back, Sail and Bed Head - the first 3 can be trained for using the above data alone.
-For Chair Back, we use stools from ModelNet; Since part annotations for Ship Sails and Bed Heads aren't available as part of the ShapeNet segmentation data, annotation for these parts were created by us. 
+Of the 6 supported parts - Arm, Roof, Propeller, Chair Back, Sail and Bed Head - the first 3 can be trained for, using the above data alone.
 
-Thus, for these latter 3 shape parts, we created 3 dummy synsets for their corresponding shape classes, to blend with our project:
+To train for Chair Back, stools are used from ModelNet; Since part annotations for Ship Sails and Bed Heads aren't available as part of the ShapeNet segmentation data, annotation for these parts were created seperately. 
+
+For these latter 3 shape parts,  3 dummy synsets are created corresponding to their shape classes, to blend with the project:
 
 ```
 ChairBack 00000000
@@ -23,7 +24,7 @@ Ship 00000001
 Bed 00000002
 ```
 
-We provide both models and annotation for these, in the same format and directory structure as the ShapeNet folders downloaded previously.
+Models and annotation are provided for these, in the same format and directory structure as the ShapeNet folders downloaded previously.
 
 Models for these 3 can be downloaded from [here](https://www.dropbox.com/sh/7bngjkv3ygo932g/AABrGisqFmqEY8qLfbhPiWm1a?dl=0)
 >This folder contains 3 synset folders `00000000,00000001,00000002` which are to be copied into the `ShapeNetCore.v1/` folder downloaded previously, alongside the other synset folders that already exist.
@@ -44,6 +45,7 @@ This script voxelizes the models of Chairs (for arms), Airplanes (for propellers
 
 - ##### Create the label files
 The label files used for the 6 parts are provided under the `labels/` folder. 
+
 For parts outside the supported 6 or newer annotation data:
 
 - This step creates the Has-Part/Lacks-Part classification-label file for a given part. It outputs a label file for the part in CSV format, with 2 columns: `modelId,[1,0]` where `1` indicates that the model has the said part, while `0` indicates lack of it.
