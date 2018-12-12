@@ -4,7 +4,9 @@
 #### Data
 The Shapenet part annotation data is available [here](https://shapenet.cs.stanford.edu/ericyi/shapenetcore_partanno_v0.zip)
 
-The corresponding Shapenet 3D models - **ShapeNetCore.v1** can be downloaded from the [Shapenet website](https://www.shapenet.org/). 
+The corresponding Shapenet 3D models - **ShapeNetCore.v1** - can be downloaded from the [Shapenet website](https://www.shapenet.org/). 
+>Download ShapeNetCore.v1
+
 - ##### Additional Data
 Of the 6 supported parts - Arm, Roof, Propeller, Chair Back, Sail and Bed Head - the first 3 can be trained for using the above data alone.
 For Chair Back, we use stools from ModelNet; Since part annotations for Ship Sails and Bed Heads aren't available as part of the ShapeNet segmentation data, annotation for these parts were created by us. 
