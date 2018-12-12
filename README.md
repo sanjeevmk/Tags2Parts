@@ -54,7 +54,7 @@ thresh : The threshold, between 0 and 1, to be applied on the predicted segments
 Arguments are passed via `fullsup_config.json` which is a similar file as `weak_config.json` with fewer parameters, and the addition of `npart` which specifies the number of segmented parts; to be set according to `shapeClass`. 
 `shapeClass` can be any of the LHS names in `utils/sysnsetnames.json` , with the exception of `ChairBack,Ship,Bed`.
 
-- #### Predicting
+#### Predicting
 - ##### Weakly supervised
 `python weak_eval.py weak_config.json`
 `weak_config.json` same as that used for training. Outputs a plot file with the name `plotFile` under `outputDir`. `plotFile` output is a CSV file with 2 columns as `Recall,Precision`.
