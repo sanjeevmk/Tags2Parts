@@ -46,9 +46,8 @@ This script voxelizes the models of Chairs (for arms), Airplanes (for propellers
 - ##### Create the label files
 The label files used for the 6 parts are provided under the `labels/` folder. 
 
-For parts outside the supported 6 or newer annotation data:
-
-- This step creates the Has-Part/Lacks-Part classification-label file for a given part. It outputs a label file for the part in CSV format, with 2 columns: `modelId,[1,0]` where `1` indicates that the model has the said part, while `0` indicates lack of it.
+ - For parts outside the supported 6 or newer annotation data:
+ This step creates the Has-Part/Lacks-Part classification-label file for a given part. It outputs a label file for the part in CSV format, with 2 columns: `modelId,[1,0]` where `1` indicates that the model has the said part, while `0` indicates lack of it.
 
 ```
 cd utils
