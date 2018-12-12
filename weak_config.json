@@ -1,0 +1,13 @@
+{
+	"synsetMap" : "./utils/synsetnames.json" ,
+	"shapeClass" : "Chair" ,
+	"labelFile" : "./labels/arm_labels" ,
+	"dataRoot" : "/mnt/store/samk/ShapeNetCore.v1/" ,
+	"segRoot" : "/mnt/store/samk/PartAnnotation/" ,
+	"batch_size" : 5,
+	"partId" : 4 ,
+	"sessionFile" : "./trainedModels/arm" ,
+	"outputDir" : "./outputs/arm" ,
+	"plotFile" : "plot_arm" ,
+	"thresh" : 0.5
+}

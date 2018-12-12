@@ -1,0 +1,10 @@
+{
+	"synsetMap" : "./utils/synsetnames.json" ,
+	"shapeClass" : "Airplane" ,
+	"dataRoot" : "/mnt/store/samk/ShapeNetCore.v1/" ,
+	"batch_size" : 5,
+	"nparts" : 4 ,
+	"sessionFile" : "./trainedModels/fullsupChair" ,
+	"outputDir" : "./outputs/Chair" ,
+	"thresh" : 0.5
+}
