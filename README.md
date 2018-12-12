@@ -5,6 +5,23 @@
 The Shapenet part annotation data is available [here](https://shapenet.cs.stanford.edu/ericyi/shapenetcore_partanno_v0.zip)
 
 The corresponding Shapenet 3D models - **ShapeNetCore.v1** can be downloaded from the [Shapenet website](https://www.shapenet.org/). 
+-##### Additional Data
+Of the 6 supported parts - Arm, Roof, Propeller, Chair Back, Sail and Bed Head - the first 3 can be trained for using the above data alone.
+For Chair Back, we use stools from ModelNet; Since part annotations for Ship Sails and Bed Heads aren't available as part of the ShapeNet segmentation data, annotation for these parts were created by us. 
+
+Thus, for these latter 3 shape parts, we created 3 dummy synsets for their corresponding shape classes, to blend with our project:
+```
+ChairBack 00000000
+Ship 00000001
+Bed 00000002
+```
+We provide both the models and annotation for these, in the same format and directory structure as the ShapeNet folders downloaded previously.
+
+Models for these 3 can be downloaded from [here](https://www.dropbox.com/sh/7bngjkv3ygo932g/AABrGisqFmqEY8qLfbhPiWm1a?dl=0)
+>This folder contains 3 synset folders `00000000,00000001,00000002` which are to be copied into the `ShapeNetCore.v1/` folder downloaded previously, alongside the other synset folders that already exist.
+
+Annotation data for these 3 can be downloaded from [here](https://www.dropbox.com/sh/oew0t0ndbfkxcxw/AABCFN8z6I9wAbszZy3v3hhDa?dl=0)
+>This folder contains 3 synset folders `00000000,00000001,00000002` which are to be copied into the `PartAnnotation/` folder downloaded previously, alongside the other synset folders that already exist.
 
 #### Pre-Processing
 - ##### Voxelize models
